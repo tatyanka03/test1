@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ange.Корзина</title>
+    <meta name="description" />
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1><img src="logo.png" alt="Logo">Ваша корзина</h1>
+
+        <ul class="nav nav-pills">
+            <li><a href="index.html">Каталог </a></li>
+            <li><a href="order.html">Оформление заказа</a></li>
+        </ul>
+        <br />
+        <div id="cart-container" class="table-responsive">
+            <table id="cart" class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Артикул</th>
+                        <th>Фото</th>
+                        <th>Наименование</th>
+                        <th>Размер</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                        <th>Сумма</th>
+                        <th>Удалить</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+
+            </table>
+        </div>
+        <div>
+            <p>Общая сумма: <span id="total-sum"></span> руб.</p>
+        </div>
+        <br />
+        <a class="btn btn-info" href="order.html">Оформить</a>
+    </div>
+
+    <script src="shopcart.js" type="text/javascript"></script>
+   
+
+</body>
+
+</html>

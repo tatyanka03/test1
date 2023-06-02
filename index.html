@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ru">
+
+<!doctype html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Ange</title>
+    <meta name="description">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="components/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+
+
+
+
+<body class="body" data-page="catalogDB">
+    <div class="container">
+        <header>
+            <div id="logo">
+                <img src="logo.png" alt="Logo">
+                <input type="text" id="search-bar" placeholder="Search...">
+            </div>
+            <ul class="nav nav-pills">
+                <li>
+                    <a href="shopcart.html">Корзина </a>
+                </li>
+                <li><a href="order.html">Оформление заказа</a></li>
+            </ul>
+        </header>
+        <br />
+        <nav>
+            <div id="filters" class="col-md-12">
+                <div class="btn-group">
+                    <li style="margin-right: 15 px;"> <img src="Толстовки.png"><button type="button" data-category="0" class="btn btn-default js-category">Толстовки</button></li>
+                    <li style="margin-right: 15 px;"> <img src="Свитера.png"><button type="button" data-category="1" class="btn btn-default js-category">Свитера</button></li>
+                    <li style="margin-right: 15 px;"> <img src="Юбка.png"><button type="button" data-category="2" class="btn btn-default js-category">Юбки</button></li>
+                    <li style="margin-right: 15 px;"><img src="Брюки.png"><button type="button" data-category="3" class="btn btn-default js-category">Брюки</button></li>
+                    <li style="margin-right: 15 px;"> <img src="Джинсы.png"> <button type="button" data-category="4" class="btn btn-default js-category">Джинсы</button></li>
+                    <li style="margin-right: 15 px;"> <img src="Платья.png"> <button type="button" data-category="5" class="btn btn-default js-category">Платья</button></li>
+                    <li style="margin-right: 15 px;"> <img src="Аксессуары.png"><button type="button" data-category="6" class="btn btn-default js-category">Аксессуары</button></li>
+
+                </div>
+                <li style="margin-right: 15 px;"> <button type="button" data-category="7" class="btn btn-default js-category">Все товары</button></li>
+        </nav>
+        <br />
+        <br />
+
+        <form id="filters-form" role="form">
+
+            <div class="col-md-4 text-right">
+                <h4>Сортировка</h4>
+                <br />
+                <select id="sort" name="sort" class="form-control">
+                            <option value="price_asc" >По цене, по возрастанию</option>
+                            <option value="price_desc">По цене, по убыванию</option>
+                                <option value="good_asc">По названию, A-Я</option>
+                                <option value="good_desc">По названию, Я-A</option>
+                        </select>
+            </div>
+
+        </form>
+        </div>
+        <br />
+        <br />
+
+        <ul id="goods" class="col-md-12">
+            <li class="small-good-item row" name="accessories">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Аксессуары.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Сумка в клетку</div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №12</div>
+                    <div class="small-good-item__price">1290 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart" data-id="12" data-image="Аксессуары.png" data-name="Сумка в клетку" data-price="1290">Добавить в корзину</button>
+                  
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="trousers">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Брюки.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Брюки клеш </div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №13</div>
+                    <div class="small-good-item__price">2450 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="13" data-image="Брюки.png" data-name="Брюки клеш" data-price="2450">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="jeans">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Джинсы.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Джинсы </div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №10</div>
+                    <div class="small-good-item__price">2890 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="10" data-image="Джинсы.png" data-name="Джинсы" data-price="2890">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="dresses">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Платья.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Вечернее платье </div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №9</div>
+                    <div class="small-good-item__price">4000 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="9" data-image="Платья.png" data-name="Вечернее платье" data-price="4000">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="sweater">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Свитера.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Свитер удлиненный</div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №14</div>
+                    <div class="small-good-item__price">2890 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart" data-id="14" data-image="Свитера.png" data-name="Свитер удлиненный" data-price="2890">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="sweatshirts">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Толстовки.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Свитшот</div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №4</div>
+                    <div class="small-good-item__price">1890 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="4" data-image="Толстовки.png" data-name="Свитшот" data-price="1890">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="skirt">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Юбка.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Юбка теннисная</div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №11</div>
+                    <div class="small-good-item__price">1490 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="11"data-image="Юбка.png"  data-name="Юбка теннисная" data-price="1490">Добавить в корзину</button>
+                </div>
+            </li>
+            <li class="small-good-item row" name="skirt">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Юбка карандаш.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Юбка карандаш </div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №3</div>
+                    <div class="small-good-item__price">1290 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="3" data-image="Юбка карандаш.png"  data-name="Юбка карандаш" data-price="1290">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="skirt">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Юбка плиссе.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Юбка плиссе </div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №7</div>
+                    <div class="small-good-item__price">1290 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="7" data-image="Юбка плиссе.png"  data-name="Юбка плиссе" data-price="1290">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="sweatshirts">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Толстовка с капюшоном.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Толстовка с капюшоном</div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №5</div>
+                    <div class="small-good-item__price">2100 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="5" data-image="Толстовка с капюшоном.png"  data-name="Толстовка с капюшоном" data-price="2100">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="accessories">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="сумка-шоппер.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Сумка-шоппер </div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №6</div>
+                    <div class="small-good-item__price">690 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="6" data-image="сумка-шоппер.png"  data-name="Сумка-шоппер" data-price="690">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="dresses">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Платье летнее.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Платье летнее </div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №8</div>
+                    <div class="small-good-item__price">2100 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart" data-id="8" data-image="Платье летнее.png"  data-name="Платье летнее" data-price="2100">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="jeans">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Джинсы рваные.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Джинсы рваные</div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №1</div>
+                    <div class="small-good-item__price">3200 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="1" data-image="Джинсы рваные.png"  data-name="Джинсы рваные" data-price="3200">Добавить в корзину</button>
+                </div>
+            </li>
+
+            <li class="small-good-item row" name="sweater">
+                <div class="col-md-2">
+                    <img class="small-good-item__img" src="Укороченный свитер.png">
+                </div>
+                <div class="col-md-10">
+                    <div class="small-good-item__name">Свитер укороченный</div>
+                    <div class="small-good-item__size">
+                        <button class="btn btn-sm js-size-btn" data-size="S">S</button>
+                        <button class="btn btn-sm js-size-btn" data-size="M">M</button>
+                        <button class="btn btn-sm js-size-btn" data-size="L">L</button>
+                    </div>
+                    <div class="small-good-item__id">Артикул №2</div>
+                    <div class="small-good-item__price">1800 руб.</div>
+                    <button class="small-good-item__btn-add btn btn-info btn-sm js-add-to-cart"  data-id="2" data-image="Укороченный свитер.png" data-name="Укороченный свитер" data-price="1800">Добавить в корзину</button>
+                </div>
+            </li>
+
+        </ul>
+        </form>
+    </div>
+
+
+
+
+    <script src="index.js" type="text/javascript"></script>
+    <script>
+        function addToCart(button) {
+            var id = button.getAttribute('data-id');
+            var image = button.getAttribute('data-image');
+            var name = button.getAttribute('data-name');
+            var price = button.getAttribute('data-price');
+
+            var item = {
+                id: id,
+                image:image,
+                name: name,
+                price: parseFloat(price),
+                count: 1
+            };
+
+            // Отправляем товар в localStorage на страницу shopcart.html
+            localStorage.setItem('selectedItem', JSON.stringify(item));
+
+            // Переходим на страницу shopcart.html
+            window.location.href = 'shopcart.html';
+        }
+    </script>
+    <script src="shopcart.js"></script>
+</body>
+
+<!--Подпись-->
+<footer>
+    <p>&copy; 2023 Ange. All rights reserved. Instagram:Ange. Phone-8-888-888-88-88</p>
+</footer>
+
+
+</html>
